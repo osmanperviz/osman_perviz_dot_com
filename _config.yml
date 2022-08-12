@@ -3,7 +3,7 @@
 title: Osman Perviz
 logo: # You can add own logo. For example '/images/logo.png'.
 description: Osman Perviz's personal blog, a software engineer currently living in Germany.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/osman_perviz_dot_com" # the subpath of your site, e.g. /blog
 url: "https://osmanperviz.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
