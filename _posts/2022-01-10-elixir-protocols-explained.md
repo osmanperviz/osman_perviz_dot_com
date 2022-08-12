@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Polymorphism in Elixir part-1
-description: how achieve polymorphism in Elixir.
+description: Let's explore how to achieve polymorphism in Elixir.
 date:   2022-02-10 15:01:35 +0300
 image:  
 tags:   [elixir]

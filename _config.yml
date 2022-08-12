@@ -11,7 +11,7 @@ url: "http://osmanperviz.com" # the base hostname & protocol for your site, e.g.
 author:
   name: Osman Perviz
   bio: I'm a software engineer with experience translating business requirements and objectives into fully-realized solutions.
-  avatar: '/images/OsiBosi.jpg'
+  avatar: '/images/OsiBosi02.jpg'
 
 social:
 - {icon: "ion-logo-twitter", label: Twitter, link: "https://twitter.com/osmanperviz"}
