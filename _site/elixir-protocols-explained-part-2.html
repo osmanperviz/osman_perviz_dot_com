@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Polymorphism in Elixir part-1</title>
-  <meta name='description' content='Let's explore how to achieve polymorphism in Elixir.'>
+  <title>Polymorphism in Elixir part-2</title>
+  <meta name='description' content='In the second part of this two-part series, we are digging more into the practical part of protocols, and see how the protocols work in reality and how we ca...'>
 
-  <link rel="canonical" href="http://localhost:4000/elixir-protocols-explained">
+  <link rel="canonical" href="http://localhost:4000/elixir-protocols-explained-part-2">
   <link rel="alternate" type="application/rss+xml" title="Osman Perviz" href="/feed.xml">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Polymorphism in Elixir part-1 – Osman Perviz">
-  <meta name="twitter:description" content="Let&apos;s explore how to achieve polymorphism in Elixir.">
+  <meta name="twitter:title" content="Polymorphism in Elixir part-2 – Osman Perviz">
+  <meta name="twitter:description" content="In the second part of this two-part series, we are digging more into the practical part of protocols, and see how the protocols work in reality and how we can implement them.">
   <meta name="twitter:image:src" content="">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content="Polymorphism in Elixir part-1 – Osman Perviz" />
-  <meta property="og:description" content="Let&apos;s explore how to achieve polymorphism in Elixir." />
+  <meta property="og:title" content="Polymorphism in Elixir part-2 – Osman Perviz" />
+  <meta property="og:description" content="In the second part of this two-part series, we are digging more into the practical part of protocols, and see how the protocols work in reality and how we can implement them." />
   <meta property="og:image" content="" />
 
   <!-- Fonts -->
@@ -179,89 +179,17 @@
 <div class="container animate">
 
   <div class="post__info">
-    <h1 class="post__title">Polymorphism in Elixir part-1</h1>
+    <h1 class="post__title">Polymorphism in Elixir part-2</h1>
     <div class="post__meta">
-      <time class="post__date" datetime="2022-02-10T13:01:35+01:00">10 February 2022</time> – <span class="post__minutes">  3 min read  </span>
+      <time class="post__date" datetime="2022-01-20T13:01:35+01:00">20 January 2022</time> – <span class="post__minutes"> 
+          1 min read  </span>
     </div>
   </div>
 
   <article class="post">
 
     <div class="post__content">
-      <p>In today’s post, we will deep dive into the potion of protocols. Since inheritance does not play a big role in the architecture of functional applications like it does in object-oriented ones and
-it’s true that Elixir and Erlang runtime don’t have a concept of inheritance in their data but that doesn’t mean that they don’t have a higher-order concept.</p>
-
-<h3 id="polymorphism-in-other-languages">Polymorphism in Other Languages</h3>
-
-<p>Object-oriented languages provide you with multiple inheritance or interfaces and allow you to declare that objects belonging to multiple different classes,  and all respond to the same method calls even doe underlying data are completely different.</p>
-
-<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="o">//</span> <span class="no">Ruby</span>
-<span class="n">class</span> <span class="no">Truck</span> <span class="o">&lt;</span> <span class="no">Vehicle</span>
-
-<span class="o">//</span> <span class="no">Java</span>
-<span class="n">public</span> <span class="n">class</span> <span class="no">Truck</span> <span class="n">implements</span> <span class="no">Drivable</span></code></pre></figure>
-
-<h3 id="polymorphism-in-elixir">Polymorphism in Elixir</h3>
-
-<p>Elixir has several mechanisms that allow us to write expressive and intuitive code. One of them is <em>Protocol</em>.<br />
-Protocols are a mechanism to achieve polymorphism in Elixir. Creating an Protocol allows us to create our own implementation for our own data.<br />
-This way a function could accept any data type that implemented a particular protocol, and it would be able to work with that data type.<br />
-Good part is that it would not have to know anything else about that data type, allowing different data types to put their own spin on a piece of functionality.</p>
-
-<p>One of the most popular protocols in 3rd party libraries comes from the <a href="https://hexdocs.pm/json/readme.html">Json</a> library, which encodes and decodes JSON data. In library sorce we can find protocal called <a href="https://github.com/cblage/elixir-json/blob/master/lib/json/encoder.ex">Json Encoder</a>. It defines single function <code class="language-plaintext highlighter-rouge">encode</code> with no definition.</p>
-
-<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="k">defprotocol</span> <span class="no">JSON</span><span class="o">.</span><span class="no">Encoder</span> <span class="k">do</span>
- <span class="nv">@moduledoc</span> <span class="s2">"..."</span>
-
- <span class="nv">@type</span> <span class="n">t</span> <span class="p">::</span> <span class="n">term</span>
- <span class="nv">@type</span> <span class="n">opts</span> <span class="p">::</span> <span class="no">Json</span><span class="o">.</span><span class="no">Encode</span><span class="o">.</span><span class="n">opts</span><span class="p">()</span>
-
- <span class="nv">@fallback_to_any</span> <span class="no">true</span>
-
- <span class="nv">@doc</span> <span class="s2">"..."</span>
- <span class="nv">@spec</span> <span class="n">encode</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span> <span class="p">::</span> <span class="n">iodata</span>
- <span class="k">def</span> <span class="n">encode</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
-<span class="k">end</span></code></pre></figure>
-
-<p>When the <em>Protocol</em> is implemented, other parts of library can call <em>encode()</em> and it will encode that data to JSON.</p>
-
-<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="no">JSON</span><span class="o">.</span><span class="no">Encoder</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span> <span class="c1"># &lt;- pass in any data (string, integers, maps, list etc..)</span></code></pre></figure>
-
-<p>You may be wondering what is the point of this formality if we could write a function with multiple function heads that’s matches that type of data, like</p>
-
-<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="k">def</span> <span class="n">encode</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">when</span> <span class="n">is_atom</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">do</span>
- <span class="o">...</span>
-<span class="k">end</span>
-
-<span class="k">def</span> <span class="n">encode</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">when</span> <span class="n">is_binary</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">do</span>
- <span class="o">...</span>
-<span class="k">end</span>
-
-<span class="k">def</span> <span class="n">encode</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="ow">when</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">do</span>
- <span class="o">...</span>
-<span class="k">end</span></code></pre></figure>
-
-<p>after all, we have guard classes for most data types in Elixir, the goal is <em>extensibility</em>.</p>
-
-<p>Having to implement a protocol for all types may quickly become monotonous and exhausting. You can define fallback behavior for types that don’t implement your protocol by implementing the protocol for Any. Let’s have a look in Json.Encode default implementation.</p>
-
-<figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="k">defimpl</span> <span class="no">JSON</span><span class="o">.</span><span class="no">Encoder</span><span class="p">,</span> <span class="ss">for:</span> <span class="no">Any</span> <span class="k">do</span>
-  <span class="nv">@moduledoc</span> <span class="sd">"""
-  Falllback module for encoding any other values
-  """</span>
-
-  <span class="nv">@doc</span> <span class="sd">"""
-  Encodes a map into a JSON object
-  """</span>
-  <span class="k">def</span> <span class="n">encode</span><span class="p">(%{}</span> <span class="o">=</span> <span class="n">struct</span><span class="p">)</span> <span class="k">do</span>
-    <span class="o">...</span>
-  <span class="k">end</span>
-
-  <span class="k">def</span> <span class="n">encode</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">do</span>
-    <span class="o">...</span>
-  <span class="k">end</span>
-<span class="k">end</span></code></pre></figure>
-
+      
 
     </div>
 
@@ -271,13 +199,13 @@ Good part is that it would not have to know anything else about that data type, 
         <ul class="share__list list-reset">
           <li class="share__item">
             <a class="share__link share__twitter"
-              href="https://twitter.com/intent/tweet?text=Polymorphism%20in%20Elixir%20part-1&url=http://localhost:4000/elixir-protocols-explained"
+              href="https://twitter.com/intent/tweet?text=Polymorphism%20in%20Elixir%20part-2&url=http://localhost:4000/elixir-protocols-explained-part-2"
               onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
               title="Share on Twitter" rel="nofollow">Twitter</a>
           </li>
           <li class="share__item">
             <a class="share__link share__facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/elixir-protocols-explained"
+              href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/elixir-protocols-explained-part-2"
               onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
               title="Share on Facebook" rel="nofollow">Facebook</a>
           </li>

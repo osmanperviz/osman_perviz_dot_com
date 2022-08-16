@@ -2,7 +2,7 @@
 layout: post
 title:  Polymorphism in Elixir part-1
 description: Let's explore how to achieve polymorphism in Elixir.
-date:   2022-02-10 15:01:35 +0300
+date:   2022-01-10 15:01:35 +0300
 image:  
 tags:   [elixir]
 ---
@@ -91,6 +91,23 @@ defimpl JSON.Encoder, for: Any do
 end
 {% endhighlight %}
 
+#### Protocol Structuring
+
+Some people include protocol in its own file and some include it in the same file as another module.\
+My preferd way is to have a *lib/protocols/* which contains actual protocol definitions. The organisation there follows the usual pattern but ommitting the first layer of the *namespace*. So if my protocol were *Foo.Bar* I’d put it into *lib/protocols/bar.ex*, also I’d put the defimpl for all *native* and *foreign* data types there.
+
+While I’d put the protocol implementation as close as possible to the data layer, in other words in the files that define the struct:
+
+{% highlight elixir %}
+defmodule Foo.Struct do
+  defstruct some_field: 0
+
+  defimpl Foo.Bar do
+    # actual implementation
+  end
+end
+{% endhighlight %}
 
 
 
+Since, in the first part of this two-part series, we focused more on the theoretical part related to protocols, in the next part, we will focus more on the practical part and actually, see how the protocols work in reality and how we can implement them.
