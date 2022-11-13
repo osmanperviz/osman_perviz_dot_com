@@ -12,7 +12,7 @@ it's true that Elixir and Erlang runtime don't have a concept of inheritance in 
 
 ### Polymorphism in Other Languages
 
-Object-oriented languages provide you with multiple inheritance or interfaces and allow you to declare that objects belonging to multiple different classes,  and all respond to the same method calls even doe underlying data are completely different.
+Object-oriented languages provide you with multiple inheritance or interfaces, allowing you to declare that objects belonging to multiple different classes, and all respond to the same method calls even doe underlying data are completely different.
 
 {% highlight elixir %}
 // Ruby
