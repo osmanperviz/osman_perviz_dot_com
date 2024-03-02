@@ -2,6 +2,8 @@
 layout: post
 title:  Polymorphism in Elixir part-1
 description: Let's explore how to achieve polymorphism in Elixir.
+permalink: elixir-protocols-explained-part-1
+description: Here's a detailed tutorial about Polymorphism in Elixir.
 date:   2022-01-10 15:01:35 +0300
 image:  
 tags:   [elixir]

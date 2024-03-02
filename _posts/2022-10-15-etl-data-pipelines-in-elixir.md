@@ -1,14 +1,16 @@
 ---
 layout: post
 title:  Building Concurrent ETL Pipelines with Elixir and GenStage
-description: Exploring the Advantage with Live Data Streams.
+seo_description: Detailed tutorial about ETL in Elixir using GenStage and data validation.
+permalink: etl-data-pipelines-in-elixir
+description: Detailed tutorial about ETL in Elixir using GenStage and data validation.
 date:   2022-10-15 15:01:35 +0300
 image:  
-tags:   [elixir, ETL, GenStage]
+tags:   [elixir, etl, genstage]
 ---
 
 Elixir, the functional and concurrent programming language, in conjunction with GenStage, its computation pipeline architecture, elegantly lends itself to ETL (Extract, Transform, Load) operations — the bloodstream of data-driven work. In this guide, we'll roll up our sleeves, bring out our keyboards, and build a live data processing pipeline using Elixir and GenStage.
-### **Transforming Data the Elixir Way:**
+### **Transforming Data the Elixir Way**
 To understand how powerful working with Elixir is, we first need to introduce some common source data. In this example, we will use trial data generated from a fake log stream, populating it in real time.
 
 {% highlight elixir %}
