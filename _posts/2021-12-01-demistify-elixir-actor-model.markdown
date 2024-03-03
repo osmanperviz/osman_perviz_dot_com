@@ -4,10 +4,10 @@ title:  Demistify elixir actor model
 description: Deep dive into what exactly the Actor Model is, and how exactly the Actor Model is implemented in Elixir/Erlang.
 seo_description: Deep dive into what exactly the Actor Model is, and how exactly the Actor Model is implemented in Elixir/Erlang.
 permalink: demistify-elixir-actor-model
-description: Detailed tutorial about ETL in Elixir using GenStage and data validation.
+description: Deep dive into what exactly the Actor Model is, and how exactly the Actor Model is implemented in Elixir/Erlang.
 date:   2021-12-01 15:01:35 +0300
 image:  
-tags:   [elixir]
+tags:   [elixir, actor model]
 ---
 
 In this blog post, I will try to demystify Elixir Actor Model and deep dive into what exactly the Actor Model is, and how exactly the Actor Model is implemented in Elixir/Erlang.
