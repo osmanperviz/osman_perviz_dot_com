@@ -7,6 +7,7 @@ description: This guide introduces polymorphism in Elixir through protocols, off
 date:   2022-01-10 15:01:35 +0300
 image:  
 tags:   [elixir, protocols ]
+keywords: [Elixir, ETL, data validation, data consistency, data integrity, Structs, data processing, transforming data.]
 ---
 
 In today's post, we're going to explore the concept of protocols in depth. Unlike object-oriented applications, where inheritance is a key architectural element, functional applications, such as those built with Elixir and Erlang, don't rely on inheritance in the same way. This is because the Elixir and Erlang runtime environments don't incorporate the concept of inheritance into their data structures. However, this doesn't mean they lack advanced concepts altogether.
