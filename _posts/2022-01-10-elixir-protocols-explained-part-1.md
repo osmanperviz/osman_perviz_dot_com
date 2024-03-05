@@ -9,8 +9,7 @@ image:
 tags:   [elixir]
 ---
 
-In today's post, we will deep dive into the potion of protocols. Since inheritance does not play a big role in the architecture of functional applications like it does in object-oriented ones and
-it's true that Elixir and Erlang runtime don't have a concept of inheritance in their data but that doesn't mean that they don't have a higher-order concept.
+In today's post, we're going to explore the concept of protocols in depth. Unlike object-oriented applications, where inheritance is a key architectural element, functional applications, such as those built with Elixir and Erlang, don't rely on inheritance in the same way. This is because the Elixir and Erlang runtime environments don't incorporate the concept of inheritance into their data structures. However, this doesn't mean they lack advanced concepts altogether.
 
 ### Polymorphism in Other Languages
 
@@ -94,11 +93,9 @@ end
 {% endhighlight %}
 
 #### Protocol Structuring
+When it comes to organizing protocols, practices vary. Some developers prefer to keep the protocol in its own separate file, while others choose to include it within the same file as another module. My preferred approach is to maintain a dedicated directory, lib/protocols/, for storing actual protocol definitions. The organization within this directory generally follows the standard pattern, except that it skips the first layer of the namespace. For example, if my protocol is named Foo.Bar, I would place it in lib/protocols/bar.ex. In this directory, I also include the defimpl for all native and foreign data types.
 
-Some people include protocol in its own file and some include it in the same file as another module.\
-My preferd way is to have a *lib/protocols/* which contains actual protocol definitions. The organisation there follows the usual pattern but ommitting the first layer of the *namespace*. So if my protocol were *Foo.Bar* I’d put it into *lib/protocols/bar.ex*, also I’d put the defimpl for all *native* and *foreign* data types there.
-
-While I’d put the protocol implementation as close as possible to the data layer, in other words in the files that define the struct:
+As for the protocol implementation, I believe it should be kept as close to the data layer as possible. This means implementing the protocol in the files that define the struct. This approach helps in maintaining a clear and logical structure, ensuring that the protocol implementations are directly associated with the relevant data types.
 
 {% highlight elixir %}
 defmodule Foo.Struct do
