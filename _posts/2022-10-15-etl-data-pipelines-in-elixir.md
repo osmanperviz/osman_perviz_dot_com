@@ -187,7 +187,7 @@ The function validate_change takes the changeset and the attribute to be validat
 
 Implementing these techniques in your ETL pipeline will ensure data coming out of your ETL pipeline follows the specified format rules and contains valid entries.
 
-#### The Asynchronicity Advantage
+#### The Benefit of Being Asynchronous
 
 GenStage takes concurrency built into Elixir and capitalizes on it, offering a series of abstractions to manage the concurrency across different stages of a data processing pipeline.
 
