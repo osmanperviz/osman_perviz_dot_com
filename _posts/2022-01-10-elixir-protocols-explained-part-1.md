@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  Polymorphism in Elixir part-1
-description: Let's explore how to achieve polymorphism in Elixir.
 permalink: elixir-protocols-explained-part-1
-description: Here's a detailed tutorial about Polymorphism in Elixir.
+description: Dive into the world of Elixir polymorphism with our comprehensive guide. Uncover the power of protocols in achieving polymorphism in functional programming, a key concept where traditional inheritance doesn't apply. Learn how Elixir's unique approach allows for flexible and intuitive code through the implementation of protocols, enabling functions to interact seamlessly with various data types. This post, the first in a two-part series, lays the theoretical groundwork, setting the stage for a practical exploration of protocol implementation in Elixir. Whether you're new to Elixir or looking to deepen your understanding, join us in exploring the dynamic capabilities of polymorphism in Elixir.
 date:   2022-01-10 15:01:35 +0300
 image:  
 tags:   [elixir]
