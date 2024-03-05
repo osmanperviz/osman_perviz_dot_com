@@ -34,6 +34,9 @@
 <loc>http://localhost:4000/tag/actor-model</loc>
 </url>
 <url>
+<loc>http://localhost:4000/tag/protocols</loc>
+</url>
+<url>
 <loc>http://localhost:4000/tag/etl</loc>
 </url>
 <url>

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Building Concurrent ETL Pipelines with Elixir and GenStage</title>
-  <meta name='description' content='Detailed tutorial about ETL in Elixir using GenStage and data validation.'>
+  <meta name='description' content='Unlock the power of Elixir for building efficient, concurrent ETL pipelines with our in-depth tutorial. Discover how to leverage GenStage for robust data pro...'>
 
   <link rel="canonical" href="http://localhost:4000/etl-data-pipelines-in-elixir">
   <link rel="alternate" type="application/rss+xml" title="Osman Perviz" href="/feed.xml">
@@ -15,12 +15,12 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Building Concurrent ETL Pipelines with Elixir and GenStage – Osman Perviz">
-  <meta name="twitter:description" content="Detailed tutorial about ETL in Elixir using GenStage and data validation.">
+  <meta name="twitter:description" content="Unlock the power of Elixir for building efficient, concurrent ETL pipelines with our in-depth tutorial. Discover how to leverage GenStage for robust data processing, ensuring high performance and reliability in your data-driven applications. From extracting real-time log streams to transforming and loading data with precision, learn the Elixir way of handling ETL tasks. This guide also delves into essential data validation techniques, ensuring your data&apos;s integrity and consistency. Whether you&apos;re new to ETL processes or looking to enhance your existing pipelines with Elixir&apos;s concurrency capabilities, this tutorial offers valuable insights and practical examples to elevate your data processing workflows.">
   <meta name="twitter:image:src" content="">
 
   <!-- Facebook OpenGraph -->
   <meta property="og:title" content="Building Concurrent ETL Pipelines with Elixir and GenStage – Osman Perviz" />
-  <meta property="og:description" content="Detailed tutorial about ETL in Elixir using GenStage and data validation." />
+  <meta property="og:description" content="Unlock the power of Elixir for building efficient, concurrent ETL pipelines with our in-depth tutorial. Discover how to leverage GenStage for robust data processing, ensuring high performance and reliability in your data-driven applications. From extracting real-time log streams to transforming and loading data with precision, learn the Elixir way of handling ETL tasks. This guide also delves into essential data validation techniques, ensuring your data&apos;s integrity and consistency. Whether you&apos;re new to ETL processes or looking to enhance your existing pipelines with Elixir&apos;s concurrency capabilities, this tutorial offers valuable insights and practical examples to elevate your data processing workflows." />
   <meta property="og:image" content="" />
 
   <!-- Fonts -->
@@ -46,8 +46,8 @@
 <meta property="og:title" content="Building Concurrent ETL Pipelines with Elixir and GenStage" />
 <meta name="author" content="Osman Perviz" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Detailed tutorial about ETL in Elixir using GenStage and data validation." />
-<meta property="og:description" content="Detailed tutorial about ETL in Elixir using GenStage and data validation." />
+<meta name="description" content="Unlock the power of Elixir for building efficient, concurrent ETL pipelines with our in-depth tutorial. Discover how to leverage GenStage for robust data processing, ensuring high performance and reliability in your data-driven applications. From extracting real-time log streams to transforming and loading data with precision, learn the Elixir way of handling ETL tasks. This guide also delves into essential data validation techniques, ensuring your data’s integrity and consistency. Whether you’re new to ETL processes or looking to enhance your existing pipelines with Elixir’s concurrency capabilities, this tutorial offers valuable insights and practical examples to elevate your data processing workflows." />
+<meta property="og:description" content="Unlock the power of Elixir for building efficient, concurrent ETL pipelines with our in-depth tutorial. Discover how to leverage GenStage for robust data processing, ensuring high performance and reliability in your data-driven applications. From extracting real-time log streams to transforming and loading data with precision, learn the Elixir way of handling ETL tasks. This guide also delves into essential data validation techniques, ensuring your data’s integrity and consistency. Whether you’re new to ETL processes or looking to enhance your existing pipelines with Elixir’s concurrency capabilities, this tutorial offers valuable insights and practical examples to elevate your data processing workflows." />
 <link rel="canonical" href="http://localhost:4000/etl-data-pipelines-in-elixir" />
 <meta property="og:url" content="http://localhost:4000/etl-data-pipelines-in-elixir" />
 <meta property="og:site_name" content="Osman Perviz" />
@@ -56,7 +56,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Building Concurrent ETL Pipelines with Elixir and GenStage" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Osman Perviz"},"dateModified":"2022-10-15T14:01:35+02:00","datePublished":"2022-10-15T14:01:35+02:00","description":"Detailed tutorial about ETL in Elixir using GenStage and data validation.","headline":"Building Concurrent ETL Pipelines with Elixir and GenStage","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/etl-data-pipelines-in-elixir"},"url":"http://localhost:4000/etl-data-pipelines-in-elixir"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Osman Perviz"},"dateModified":"2022-10-15T14:01:35+02:00","datePublished":"2022-10-15T14:01:35+02:00","description":"Unlock the power of Elixir for building efficient, concurrent ETL pipelines with our in-depth tutorial. Discover how to leverage GenStage for robust data processing, ensuring high performance and reliability in your data-driven applications. From extracting real-time log streams to transforming and loading data with precision, learn the Elixir way of handling ETL tasks. This guide also delves into essential data validation techniques, ensuring your data’s integrity and consistency. Whether you’re new to ETL processes or looking to enhance your existing pipelines with Elixir’s concurrency capabilities, this tutorial offers valuable insights and practical examples to elevate your data processing workflows.","headline":"Building Concurrent ETL Pipelines with Elixir and GenStage","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/etl-data-pipelines-in-elixir"},"url":"http://localhost:4000/etl-data-pipelines-in-elixir"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -116,6 +116,10 @@
               <li class="nav__item">
                 <a href="/resume/" class="nav__link">Resume</a>
               </li>
+              
+              
+              
+              
               
               
               
@@ -532,7 +536,7 @@ Imagine adding a Changeset to our data entry to ensure that each log message is 
       <h3 class="widget__title">Explore tags</h3>
     </div>
     <div class="tag__cloud">
-      <a href="/tag/actor-model.html" class="set-1">actor model</a> <a href="/tag/elixir.html" class="set-5">elixir</a> <a href="/tag/etl.html" class="set-1">etl</a> <a href="/tag/genstage.html" class="set-1">genstage</a>
+      <a href="/tag/actor-model.html" class="set-1">actor model</a> <a href="/tag/elixir.html" class="set-5">elixir</a> <a href="/tag/etl.html" class="set-1">etl</a> <a href="/tag/genstage.html" class="set-1">genstage</a> <a href="/tag/protocols.html" class="set-1">protocols</a>
     </div>
   </div>
 </div>

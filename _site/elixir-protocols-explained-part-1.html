@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Polymorphism in Elixir part-1</title>
-  <meta name='description' content='Here's a detailed tutorial about Polymorphism in Elixir.'>
+  <meta name='description' content='Dive into the world of Elixir polymorphism with our comprehensive guide. Uncover the power of protocols in achieving polymorphism in functional programming, ...'>
 
   <link rel="canonical" href="http://localhost:4000/elixir-protocols-explained-part-1">
   <link rel="alternate" type="application/rss+xml" title="Osman Perviz" href="/feed.xml">
@@ -15,12 +15,12 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Polymorphism in Elixir part-1 – Osman Perviz">
-  <meta name="twitter:description" content="Here&apos;s a detailed tutorial about Polymorphism in Elixir.">
+  <meta name="twitter:description" content="Dive into the world of Elixir polymorphism with our comprehensive guide. Uncover the power of protocols in achieving polymorphism in functional programming, a key concept where traditional inheritance doesn&apos;t apply. Learn how Elixir&apos;s unique approach allows for flexible and intuitive code through the implementation of protocols, enabling functions to interact seamlessly with various data types. This post, the first in a two-part series, lays the theoretical groundwork, setting the stage for a practical exploration of protocol implementation in Elixir. Whether you&apos;re new to Elixir or looking to deepen your understanding, join us in exploring the dynamic capabilities of polymorphism in Elixir.">
   <meta name="twitter:image:src" content="">
 
   <!-- Facebook OpenGraph -->
   <meta property="og:title" content="Polymorphism in Elixir part-1 – Osman Perviz" />
-  <meta property="og:description" content="Here&apos;s a detailed tutorial about Polymorphism in Elixir." />
+  <meta property="og:description" content="Dive into the world of Elixir polymorphism with our comprehensive guide. Uncover the power of protocols in achieving polymorphism in functional programming, a key concept where traditional inheritance doesn&apos;t apply. Learn how Elixir&apos;s unique approach allows for flexible and intuitive code through the implementation of protocols, enabling functions to interact seamlessly with various data types. This post, the first in a two-part series, lays the theoretical groundwork, setting the stage for a practical exploration of protocol implementation in Elixir. Whether you&apos;re new to Elixir or looking to deepen your understanding, join us in exploring the dynamic capabilities of polymorphism in Elixir." />
   <meta property="og:image" content="" />
 
   <!-- Fonts -->
@@ -46,8 +46,8 @@
 <meta property="og:title" content="Polymorphism in Elixir part-1" />
 <meta name="author" content="Osman Perviz" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Here’s a detailed tutorial about Polymorphism in Elixir." />
-<meta property="og:description" content="Here’s a detailed tutorial about Polymorphism in Elixir." />
+<meta name="description" content="Dive into the world of Elixir polymorphism with our comprehensive guide. Uncover the power of protocols in achieving polymorphism in functional programming, a key concept where traditional inheritance doesn’t apply. Learn how Elixir’s unique approach allows for flexible and intuitive code through the implementation of protocols, enabling functions to interact seamlessly with various data types. This post, the first in a two-part series, lays the theoretical groundwork, setting the stage for a practical exploration of protocol implementation in Elixir. Whether you’re new to Elixir or looking to deepen your understanding, join us in exploring the dynamic capabilities of polymorphism in Elixir." />
+<meta property="og:description" content="Dive into the world of Elixir polymorphism with our comprehensive guide. Uncover the power of protocols in achieving polymorphism in functional programming, a key concept where traditional inheritance doesn’t apply. Learn how Elixir’s unique approach allows for flexible and intuitive code through the implementation of protocols, enabling functions to interact seamlessly with various data types. This post, the first in a two-part series, lays the theoretical groundwork, setting the stage for a practical exploration of protocol implementation in Elixir. Whether you’re new to Elixir or looking to deepen your understanding, join us in exploring the dynamic capabilities of polymorphism in Elixir." />
 <link rel="canonical" href="http://localhost:4000/elixir-protocols-explained-part-1" />
 <meta property="og:url" content="http://localhost:4000/elixir-protocols-explained-part-1" />
 <meta property="og:site_name" content="Osman Perviz" />
@@ -56,7 +56,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Polymorphism in Elixir part-1" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Osman Perviz"},"dateModified":"2022-01-10T13:01:35+01:00","datePublished":"2022-01-10T13:01:35+01:00","description":"Here’s a detailed tutorial about Polymorphism in Elixir.","headline":"Polymorphism in Elixir part-1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/elixir-protocols-explained-part-1"},"url":"http://localhost:4000/elixir-protocols-explained-part-1"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Osman Perviz"},"dateModified":"2022-01-10T13:01:35+01:00","datePublished":"2022-01-10T13:01:35+01:00","description":"Dive into the world of Elixir polymorphism with our comprehensive guide. Uncover the power of protocols in achieving polymorphism in functional programming, a key concept where traditional inheritance doesn’t apply. Learn how Elixir’s unique approach allows for flexible and intuitive code through the implementation of protocols, enabling functions to interact seamlessly with various data types. This post, the first in a two-part series, lays the theoretical groundwork, setting the stage for a practical exploration of protocol implementation in Elixir. Whether you’re new to Elixir or looking to deepen your understanding, join us in exploring the dynamic capabilities of polymorphism in Elixir.","headline":"Polymorphism in Elixir part-1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/elixir-protocols-explained-part-1"},"url":"http://localhost:4000/elixir-protocols-explained-part-1"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -116,6 +116,10 @@
               <li class="nav__item">
                 <a href="/resume/" class="nav__link">Resume</a>
               </li>
+              
+              
+              
+              
               
               
               
@@ -217,8 +221,7 @@
   <article class="post">
 
     <div class="post__content">
-      <p>In today’s post, we will deep dive into the potion of protocols. Since inheritance does not play a big role in the architecture of functional applications like it does in object-oriented ones and
-it’s true that Elixir and Erlang runtime don’t have a concept of inheritance in their data but that doesn’t mean that they don’t have a higher-order concept.</p>
+      <p>In today’s post, we’re going to explore the concept of protocols in depth. Unlike object-oriented applications, where inheritance is a key architectural element, functional applications, such as those built with Elixir and Erlang, don’t rely on inheritance in the same way. This is because the Elixir and Erlang runtime environments don’t incorporate the concept of inheritance into their data structures. However, this doesn’t mean they lack advanced concepts altogether.</p>
 
 <h3 id="polymorphism-in-other-languages">Polymorphism in Other Languages</h3>
 
@@ -292,11 +295,9 @@ Good part is that it would not have to know anything else about that data type, 
 <span class="k">end</span></code></pre></figure>
 
 <h4 id="protocol-structuring">Protocol Structuring</h4>
+<p>When it comes to organizing protocols, practices vary. Some developers prefer to keep the protocol in its own separate file, while others choose to include it within the same file as another module. My preferred approach is to maintain a dedicated directory, lib/protocols/, for storing actual protocol definitions. The organization within this directory generally follows the standard pattern, except that it skips the first layer of the namespace. For example, if my protocol is named Foo.Bar, I would place it in lib/protocols/bar.ex. In this directory, I also include the defimpl for all native and foreign data types.</p>
 
-<p>Some people include protocol in its own file and some include it in the same file as another module.<br />
-My preferd way is to have a <em>lib/protocols/</em> which contains actual protocol definitions. The organisation there follows the usual pattern but ommitting the first layer of the <em>namespace</em>. So if my protocol were <em>Foo.Bar</em> I’d put it into <em>lib/protocols/bar.ex</em>, also I’d put the defimpl for all <em>native</em> and <em>foreign</em> data types there.</p>
-
-<p>While I’d put the protocol implementation as close as possible to the data layer, in other words in the files that define the struct:</p>
+<p>As for the protocol implementation, I believe it should be kept as close to the data layer as possible. This means implementing the protocol in the files that define the struct. This approach helps in maintaining a clear and logical structure, ensuring that the protocol implementations are directly associated with the relevant data types.</p>
 
 <figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="k">defmodule</span> <span class="no">Foo</span><span class="o">.</span><span class="no">Struct</span> <span class="k">do</span>
   <span class="k">defstruct</span> <span class="ss">some_field:</span> <span class="mi">0</span>
@@ -333,6 +334,8 @@ My preferd way is to have a <em>lib/protocols/</em> which contains actual protoc
       <div class="post__tags">
         
         <a href="/tag/elixir" class="post__tag">elixir</a>
+        
+        <a href="/tag/protocols" class="post__tag">protocols</a>
         
       </div>
       
@@ -445,7 +448,7 @@ My preferd way is to have a <em>lib/protocols/</em> which contains actual protoc
       <h3 class="widget__title">Explore tags</h3>
     </div>
     <div class="tag__cloud">
-      <a href="/tag/actor-model.html" class="set-1">actor model</a> <a href="/tag/elixir.html" class="set-5">elixir</a> <a href="/tag/etl.html" class="set-1">etl</a> <a href="/tag/genstage.html" class="set-1">genstage</a>
+      <a href="/tag/actor-model.html" class="set-1">actor model</a> <a href="/tag/elixir.html" class="set-5">elixir</a> <a href="/tag/etl.html" class="set-1">etl</a> <a href="/tag/genstage.html" class="set-1">genstage</a> <a href="/tag/protocols.html" class="set-1">protocols</a>
     </div>
   </div>
 </div>
