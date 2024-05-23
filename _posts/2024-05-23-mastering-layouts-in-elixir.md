@@ -86,8 +86,7 @@ end
 {% endhighlight %}
 Here, we defined a layout specifically for the Product page view.
 
-###### gst
-Challenge Conquered: Combining `live_session` with Layouts
+###### Challenge Conquered: Combining `live_session` with Layouts
 
 Phoenix also lets you define a layout within a `live_session`. This is especially useful if you want all LiveViews within the session to use the same LiveLayout.
 
