@@ -5,7 +5,7 @@ seo_description: Discover the versatility of Phoenix Layouts for structuring you
 description: Discover the versatility of Phoenix Layouts for structuring your Elixir LiveView applications. Learn how to enhance your web development process with Phoenix Layouts today!
 permalink: mastering-layouts-in-elixir
 date:   2024-05-22 15:01:35 +0300
-image:  
+image:  "images/layout-blog-post.jpg"
 tags:   [elixir, liveview]
 ---
 
