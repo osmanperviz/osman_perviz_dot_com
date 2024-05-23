@@ -17,7 +17,7 @@ In a Phoenix application, layouts are akin to templates that determine the struc
 ### Mapping the Phoenix Layout Landscape
 Phoenix provides several layout choices: the root layout, the normal layout, live layouts, and page-specific layouts.
 
-#### The Root Layout
+###### The Root Layout
 The root layout serves as a parent template for all pages in the application. It proves particularly useful for sections of your app that remain constant, such as headers or footers.
 
 {% highlight elixir %}
@@ -34,7 +34,7 @@ The root layout serves as a parent template for all pages in the application. It
 {% endhighlight %}
 In this example, ```root.html``` is the root layout for all LiveViews, and it remains static across all pages.
 
-#### The Normal Layout
+###### The Normal Layout
 The `normal layout` is usually used for static content. It is ideal for delivering a consistent appearance across non-live or `static` pages.
 {% highlight elixir %}
 # lib/my_app_web/layout_view.ex
@@ -54,7 +54,7 @@ defmodule MyAppWeb.LayoutView do
 {% endhighlight %}
 In `app.html.leex`, the dynamic content is rendered within the <main> tag in line with our layout's design.
 
-#### Live Layouts
+###### Live Layouts
 Live Layouts are ideal for delivering real-time, dynamic content. Below you can see a `LiveLayout` example for a chat application:
 {% highlight elixir %}
 # lib/my_app_web/live/live_layout.ex
@@ -73,7 +73,7 @@ end
 {% endhighlight %}
 The `UserListLive` LiveView is always rendered in the chat container irrespective of which LiveView is shown on the right.
 
-#### Page-specific Layouts
+###### Page-specific Layouts
 
 Page-specific layouts let you define a particular layout for individual pages.
 {% highlight elixir %}
@@ -86,7 +86,8 @@ end
 {% endhighlight %}
 Here, we defined a layout specifically for the Product page view.
 
-#### Challenge Conquered: Combining `live_session` with Layouts
+###### gst
+Challenge Conquered: Combining `live_session` with Layouts
 
 Phoenix also lets you define a layout within a `live_session`. This is especially useful if you want all LiveViews within the session to use the same LiveLayout.
 

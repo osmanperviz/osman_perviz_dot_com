@@ -9,7 +9,7 @@
   <title>Mastering Layouts in Phoenix for Elixir LiveView Apps</title>
   <meta name='description' content='Discover the versatility of Phoenix Layouts for structuring your Elixir LiveView applications. Learn how to enhance your web development process with Phoenix...'>
 
-  <link rel="canonical" href="http://localhost:4000/mastering-layouts-in-elixir">
+  <link rel="canonical" href="http://osmanperviz.com/mastering-layouts-in-elixir">
   <link rel="alternate" type="application/rss+xml" title="Osman Perviz" href="/feed.xml">
 
   <!-- Twitter Card -->
@@ -48,15 +48,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Discover the versatility of Phoenix Layouts for structuring your Elixir LiveView applications. Learn how to enhance your web development process with Phoenix Layouts today!" />
 <meta property="og:description" content="Discover the versatility of Phoenix Layouts for structuring your Elixir LiveView applications. Learn how to enhance your web development process with Phoenix Layouts today!" />
-<link rel="canonical" href="http://localhost:4000/mastering-layouts-in-elixir" />
-<meta property="og:url" content="http://localhost:4000/mastering-layouts-in-elixir" />
+<link rel="canonical" href="http://osmanperviz.com/mastering-layouts-in-elixir" />
+<meta property="og:url" content="http://osmanperviz.com/mastering-layouts-in-elixir" />
 <meta property="og:site_name" content="Osman Perviz" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-05-22T14:01:35+02:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Mastering Layouts in Phoenix for Elixir LiveView Apps" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Osman Perviz"},"dateModified":"2024-05-22T14:01:35+02:00","datePublished":"2024-05-22T14:01:35+02:00","description":"Discover the versatility of Phoenix Layouts for structuring your Elixir LiveView applications. Learn how to enhance your web development process with Phoenix Layouts today!","headline":"Mastering Layouts in Phoenix for Elixir LiveView Apps","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/mastering-layouts-in-elixir"},"url":"http://localhost:4000/mastering-layouts-in-elixir"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Osman Perviz"},"dateModified":"2024-05-22T14:01:35+02:00","datePublished":"2024-05-22T14:01:35+02:00","description":"Discover the versatility of Phoenix Layouts for structuring your Elixir LiveView applications. Learn how to enhance your web development process with Phoenix Layouts today!","headline":"Mastering Layouts in Phoenix for Elixir LiveView Apps","mainEntityOfPage":{"@type":"WebPage","@id":"http://osmanperviz.com/mastering-layouts-in-elixir"},"url":"http://osmanperviz.com/mastering-layouts-in-elixir"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -233,7 +233,7 @@
 <h3 id="mapping-the-phoenix-layout-landscape">Mapping the Phoenix Layout Landscape</h3>
 <p>Phoenix provides several layout choices: the root layout, the normal layout, live layouts, and page-specific layouts.</p>
 
-<h4 id="the-root-layout">The Root Layout</h4>
+<h6 id="the-root-layout">The Root Layout</h6>
 <p>The root layout serves as a parent template for all pages in the application. It proves particularly useful for sections of your app that remain constant, such as headers or footers.</p>
 
 <figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="c1"># Setting the root layout in live_view router</span>
@@ -249,7 +249,7 @@
 
 <p>In this example, <code class="language-plaintext highlighter-rouge">root.html</code> is the root layout for all LiveViews, and it remains static across all pages.</p>
 
-<h4 id="the-normal-layout">The Normal Layout</h4>
+<h6 id="the-normal-layout">The Normal Layout</h6>
 <p>The <code class="language-plaintext highlighter-rouge">normal layout</code> is usually used for static content. It is ideal for delivering a consistent appearance across non-live or <code class="language-plaintext highlighter-rouge">static</code> pages.</p>
 
 <figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="c1"># lib/my_app_web/layout_view.ex</span>
@@ -269,7 +269,7 @@
 
 <p>In <code class="language-plaintext highlighter-rouge">app.html.leex</code>, the dynamic content is rendered within the &lt;main&gt; tag in line with our layout’s design.</p>
 
-<h4 id="live-layouts">Live Layouts</h4>
+<h6 id="live-layouts">Live Layouts</h6>
 <p>Live Layouts are ideal for delivering real-time, dynamic content. Below you can see a <code class="language-plaintext highlighter-rouge">LiveLayout</code> example for a chat application:</p>
 
 <figure class="highlight"><pre><code class="language-elixir" data-lang="elixir"><span class="c1"># lib/my_app_web/live/live_layout.ex</span>
@@ -288,7 +288,7 @@
 
 <p>The <code class="language-plaintext highlighter-rouge">UserListLive</code> LiveView is always rendered in the chat container irrespective of which LiveView is shown on the right.</p>
 
-<h4 id="page-specific-layouts">Page-specific Layouts</h4>
+<h6 id="page-specific-layouts">Page-specific Layouts</h6>
 
 <p>Page-specific layouts let you define a particular layout for individual pages.</p>
 
@@ -301,7 +301,8 @@
 
 <p>Here, we defined a layout specifically for the Product page view.</p>
 
-<h4 id="challenge-conquered-combining-live_session-with-layouts">Challenge Conquered: Combining <code class="language-plaintext highlighter-rouge">live_session</code> with Layouts</h4>
+<h6 id="gst">gst</h6>
+<p>Challenge Conquered: Combining <code class="language-plaintext highlighter-rouge">live_session</code> with Layouts</p>
 
 <p>Phoenix also lets you define a layout within a <code class="language-plaintext highlighter-rouge">live_session</code>. This is especially useful if you want all LiveViews within the session to use the same LiveLayout.</p>
 
@@ -328,13 +329,13 @@
         <ul class="share__list list-reset">
           <li class="share__item">
             <a class="share__link share__twitter"
-              href="https://twitter.com/intent/tweet?text=Mastering%20Layouts%20in%20Phoenix%20for%20Elixir%20LiveView%20Apps&url=http://localhost:4000/mastering-layouts-in-elixir"
+              href="https://twitter.com/intent/tweet?text=Mastering%20Layouts%20in%20Phoenix%20for%20Elixir%20LiveView%20Apps&url=http://osmanperviz.com/mastering-layouts-in-elixir"
               onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
               title="Share on Twitter" rel="nofollow">Twitter</a>
           </li>
           <li class="share__item">
             <a class="share__link share__facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/mastering-layouts-in-elixir"
+              href="https://www.facebook.com/sharer/sharer.php?u=http://osmanperviz.com/mastering-layouts-in-elixir"
               onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
               title="Share on Facebook" rel="nofollow">Facebook</a>
           </li>
