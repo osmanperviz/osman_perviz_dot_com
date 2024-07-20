@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  Building Concurrent ETL Pipelines with Elixir and GenStage
-seo_description: Unlock the power of Elixir for building efficient, concurrent ETL pipelines with our in-depth tutorial. Discover how to leverage GenStage for robust data processing, ensuring high performance and reliability in your data-driven applications. From extracting real-time log streams to transforming and loading data with precision, learn the Elixir way of handling ETL tasks. This guide also delves into essential data validation techniques, ensuring your data's integrity and consistency. Whether you're new to ETL processes or looking to enhance your existing pipelines with Elixir's concurrency capabilities, this tutorial offers valuable insights and practical examples to elevate your data processing workflows.
+title: "Building Efficient ETL Pipelines with Elixir & GenStage: A Comprehensive Guide"
+seo_description: "Discover how to build efficient and concurrent ETL pipelines using Elixir and GenStage. This in-depth guide covers real-time data processing, extraction, transformation, and loading, with practical code examples and best practices for data validation and consistency. Unlock the power of Elixir for your data-driven projects and learn to handle high-volume data tasks effortlessly."
 permalink: etl-data-pipelines-in-elixir
-description: This guide details how to build efficient, concurrent ETL pipelines using Elixir and GenStage, offering insights into data validation and processing to enhance data-driven applications.
-date:   2022-10-15 15:01:35 +0300
-image:  
-tags:   [elixir, etl, genstage]
+description: "This guide details how to build efficient, concurrent ETL pipelines using Elixir and GenStage, offering insights into data validation and processing to enhance your data-driven applications."
+date: 2022-10-15 15:01:35 +0300
+image: "images/etl-blog-post.png"
+tags: [elixir, etl, genstage, data processing, concurrent pipelines]
 ---
+
 
 Let's dive into how Elixir, a programming language known for handling tasks simultaneously and efficiently, works perfectly with GenStage to manage data operations - the heart of any data-focused project. In this easy-to-follow guide, we're going to have some fun as we use our keyboards to create a real-time data processing pipeline with Elixir and GenStage.
 ### **Transforming Data the Elixir Way**
@@ -187,21 +188,28 @@ The function validate_change takes the changeset and the attribute to be validat
 
 Implementing these techniques in your ETL pipeline will ensure data coming out of your ETL pipeline follows the specified format rules and contains valid entries.
 
-#### The Benefit of Being Asynchronous
+### The Benefit of Being Asynchronous
+GenStage takes the concurrency built into Elixir and capitalizes on it, offering a series of abstractions to manage the concurrency across different stages of a data processing pipeline.
 
-GenStage takes concurrency built into Elixir and capitalizes on it, offering a series of abstractions to manage the concurrency across different stages of a data processing pipeline.
-
-GenStage works by splitting the roles into stages, with each stage acting as a mini application, handling its own data processing and passing on the results to the next stage. Asynchronous here means each stage works independently and in conjunction with each other stage.
+GenStage works by splitting the roles into stages, with each stage acting as a mini-application, handling its own data processing and passing on the results to the next stage. Asynchronous here means each stage works independently and in conjunction with each other stage.
 
 Comfortably handling back-pressure or the build-up of data at any stage is GenStage's selling point. For example, if the consuming stage can't keep up with the producing stage, GenStage reduces the load sent to the consumer, preventing data flow issues, a feature lacking in central-thread languages like Ruby, where one thread handles multiple actions sequentially.
 
 #### Why GenStage Over Single-Threading/Multi-Threading
 The preference arises from the flexibility and performance GenStage offers.
 
-* Speed & Efficiency: GenStage's asynchronous nature means all available CPU resources are efficiently used. This approach delivers a notable speed advantage over single-threaded languages.
+- **Speed & Efficiency:** GenStage's asynchronous nature means all available CPU resources are efficiently used. This approach delivers a notable speed advantage over single-threaded languages.
+- **Resilience & Fault Tolerance:** Unlike typical scenarios in a multithreaded environment, if one Elixir (GenStage) process fails, it doesn't crash the entire application. Elixir's support for advanced features like Supervisor trees makes it resilient against failures.
+- **Scalability:** When it comes to scalability, GenStage outperforms both single-threaded and multi-threaded languages. GenStage efficiently handles a large number of processes without a torrent of threads overburdening the system resources.
 
-* Resilience & Fault Tolerance: Unlike typical scenarios in a multithreaded environment, if one Elixir (GenStage) process fails, it doesn't crash the entire application. Elixir's support for advanced features like Supervisor trees makes it resilient against failures.
+## Conclusion
+This guide only scratches the surface of Elixir's powerful concurrency and GenStage's reliable back-pressure handling.I like to hear more about how you’ve managed your ETL needs, particularly data consistency and validation, with Elixir. Share your ways, passionate thoughts, and experiences with me!
 
-* Scalability: When it comes to scalability, GenStage outperforms both single-threaded and multi-threaded languages. GenStage efficiently handles a large number of processes without a torrent of threads overburdening the system resources.
+---
 
-This guide only scratches the surface of Elixir's powerful concurrency and GenStage's reliable back-pressure handling.I like to hear more about how you’ve managed your ETL needs, particularly data consistency and validation, with Elixir. Share your ways, passionate thoughts, and experiences with us!
+### Additional Resources
+- [Elixir Official Documentation](https://elixir-lang.org/docs.html)
+- [GenStage GitHub Repository](https://github.com/elixir-lang/gen_stage)
+- [Real-time Data Processing with GenStage](https://medium.com/@ben.perry/genstage-a-real-time-data-pipeline-in-elixir-78d84b1c2b91): A practical example of building real-time data pipelines with GenStage.
+- [What is ETL?](https://www.ibm.com/cloud/learn/etl): Learn about ETL processes, their importance, and how they are implemented.
+- [ETL Best Practices](https://www.precisely.com/blog/big-data/etl-best-practices): Best practices for building ETL pipelines.
