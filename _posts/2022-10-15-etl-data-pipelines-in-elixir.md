@@ -6,7 +6,7 @@ permalink: etl-data-pipelines-in-elixir
 description: "This guide details how to build efficient, concurrent ETL pipelines using Elixir and GenStage, offering insights into data validation and processing to enhance your data-driven applications."
 date: 2022-10-15 15:01:35 +0300
 image: "images/etl-blog-post.png"
-tags: [elixir, etl, genstage, data processing, concurrent pipelines]
+tags: [elixir, etl, genstage, data-processing, concurrent-pipelines]
 ---
 
 

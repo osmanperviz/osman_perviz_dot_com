@@ -6,7 +6,7 @@ seo_description: Dive into the world of Elixir polymorphism with our comprehensi
 description: This guide introduces polymorphism in Elixir through protocols, offering a foundational understanding of how Elixir enables flexible code interaction across different data types, setting the stage for practical protocol implementation.
 date:   2022-01-10 15:01:35 +0300
 image:  
-tags:   [elixir, protocols ]
+tags:   [elixir, protocols]
 keywords: [Elixir, ETL, data validation, data consistency, data integrity, Structs, data processing, transforming data.]
 ---
 
