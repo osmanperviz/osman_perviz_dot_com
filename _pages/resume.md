@@ -1,71 +1,69 @@
 ---
 layout: page
-title: Resume
+title: "resume"
 permalink: /resume/
 image: '/images/11.jpg'
+seo_description: "Discover the professional journey of Osman, a senior software engineer specializing in Domain-Driven Design, event-driven systems, and full-stack development. Explore his roles at Studitemps, Serohtec, Evopark, 9elements, and DnD apps."
 ---
+## Senior Software Engineer, Studitemps GmbH, Köln (Oct 2019 — Present)
 
-#### Senior Software engineer, Studitemps Gmbh Köln (Oct 2019 — Present)
-[Jobvalley](https://jobvalley.com/de-de/) are Germany's largest and most popular employer platform for students, graduates, and young professionals. I'm a member of the Corporate team, we are building an event-driven distributed system implementing Domain Driven Design software design approach.
+[Jobvalley](https://jobvalley.com/de-de/) is Germany's premier employer platform for students, graduates, and young professionals. As a key member of the Corporate team, I lead the development of an event-driven distributed system utilizing Domain-Driven Design (DDD) principles.
 
-* Build and maintain multiple self-containd systems.
-* Involved in designing and modeling of events
-* Collaborated on future projects and innovation
-* Conducting code peer reviews with other members in my team
-* Involved in building working processes
-* Mentored new employees
-* Conducted job interviews
-* Tehnologies used: #Elixir #Ruby #LiveView #React #RabbitMQ  #Postgres #GraphQL #AWS
+- **System Architecture**: Architect and maintain multiple self-contained systems to ensure scalability and robustness.
+- **Event Design**: Spearhead the design and modeling of critical events within the system.
+- **Innovation and Collaboration**: Drive future projects and innovation, collaborating with cross-functional teams.
+- **Code Quality**: Conduct thorough code peer reviews to maintain high standards.
+- **Process Improvement**: Develop and refine working processes to enhance team productivity.
+- **Mentorship and Leadership**: Mentor new employees and conduct job interviews to build a strong team.
 
-
-***
-
-####  Full-Stack Developer, Serohtec Gmbh Köln (Nov 2017 — Aug 2019)
-Serohtec is a young startup based in Cologne. Our main product is [Metalsale.com](https://www.metalsale.com/).
-Metalsale is a digital trading platform that allows non-ferrous metal scrap to be traded easily, lucratively and safely. We digitally close recycling cycles and increase the recycling rate. We build an event-driven system implementing Event Sourcing and CQRS application architecture patterns.
-
-* Completely build infrastructure hosted on AWS from scratch, CI/CD, VPN network, deployment, cluster with auto-scaling, Kibana, CloudWatch , infrastructure as code (CloudFormation)
-* Involved in designing and modeling of events
-* Worked on real-time event-based communication
-* Tehnologies used: #Node.js #React.js #Postgres #GraphQL #AWS
+**Technologies used:** Elixir, Ruby, LiveView, React, RabbitMQ, Postgres, GraphQL, AWS
 
 ***
 
-#### Full-Stack Developer, Evopark Gmbh Köln (Jun 2016 — Oct 2017)
+## Full-Stack Developer, Serohtec GmbH, Köln (Nov 2017 — Aug 2019)
 
-[Evopark](https://www.evopark.com/en/start-en/) simplifes parking for motorists. The app provides information on free parking garages and navigates the customer there on request. The parking card makes the ticket rental, the change of cash and queuing at the pay machine super8uous.
+At Serohtec, a dynamic startup in Cologne, I played a pivotal role in developing [Metalsale.com](https://www.metalsale.com/), a groundbreaking digital trading platform for non-ferrous metal scrap.
 
-* Worked on multiple company's products (Porshe, Axa, SWT) as a Full Stack Developer.
-* Part of the feature team, whose task is to implement and add new features in the application.
-* Worked on several features such as (Analytics, Avato Payment Solutions, Localization, custom branding, Integration with different garage systems such as [Scheidt&Bachmann](https://www.scheidt-bachmann.de/en/) and [Skidata](https://www.skidata.com/en/)).
-* One of the main tasks of our team is to provide a REST-like APIs (Grape) for the mobile app.
-* Develop our mobile app.
-* Tehnologies used: #Node.js #React.js #Postgres #GraphQL #AWS
+- **Infrastructure Development**: Engineered the entire AWS infrastructure from scratch, including CI/CD pipelines, VPN network, deployment processes, auto-scaling clusters, and monitoring tools.
+- **Event Sourcing**: Designed and modeled event-driven systems implementing Event Sourcing and CQRS architecture patterns.
+- **Real-Time Communication**: Developed real-time event-based communication systems to enhance user interaction.
 
-***
-
-#### Full-Stack Developer, 9elements Gmbh, Bochum (Feb 2016 — Jun 2016)
-
-[9elements](https://9elements.com/) is a small, privately-held digital agency in the middle of the industrial Ruhr Area, Germany. They are infuenced by a wide spectrum of backgrounds: from game development and interface design to state-of-the-art computer science research, from business programming to digital culture.
-
-*  Developed multiple B2B/B2C apps ([Ausbildung.de](https://www.ausbildung.de/), [Meineuni.de](https://www.meineuni.de/))
-*  Worked as part of international team
-*  Worked in backend, frontend and full-stack roles
-* Researched solutions for new problem domains
-* Tehnologies used: #RubyOnRails, #React, #Cordova, #Java, #Socket.io,
-#GrapeAPI
+**Technologies used:** Node.js, React.js, Postgres, GraphQL, AWS
 
 ***
 
-#### Backend Developer - remote, DnD apps (Jan 2015 — Dec 2015)
+## Full-Stack Developer, Evopark GmbH, Köln (Jun 2016 — Oct 2017)
 
-DnD apps is a software service provider based in Rosenheim, near Munich. They specialize in high quality mobile app solutions.
-######  Projects worked on
-[Starbulls Rosenheim](https://apps.apple.com/de/app/starbulls-rosenheim/id940377490) (RubyOnRails, Angular.js, Postgres, Rpush)
- - This is the app for the local hockey team Rosenheim starbulls. I was
-responsible for providing the API for different platforms, integrating Apple Push Notifcation, also creating a small Content Management System.
+At [Evopark](https://www.evopark.com/en/start-en/), I contributed to simplifying parking for motorists through innovative app solutions.
 
-[Bw-Farhgemeinschaft](http://bwfahrgemeinschaft.dndapps.com/) (RubyOnRails)
- - In this project, my responsibility was to ensure safe and fast API for
-different platforms. In this application, we are implement In-app Billing
-  for iTunes and Google Play service.
+- **Product Development**: Developed multiple high-profile products for clients like Porsche, Axa, and SWT.
+- **Feature Implementation**: Led the implementation of critical features, including Analytics, Payment Solutions, Localization, and custom branding.
+- **System Integration**: Integrated the app with leading garage systems like [Scheidt & Bachmann](https://www.scheidt-bachmann.de/en/) and [Skidata](https://www.skidata.com/en/).
+- **API Development**: Created REST-like APIs (Grape) and developed mobile applications to enhance user experience.
+
+**Technologies used:** Node.js, React.js, Postgres, GraphQL, AWS
+
+***
+
+## Full-Stack Developer, 9elements GmbH, Bochum (Feb 2016 — Jun 2016)
+
+At [9elements](https://9elements.com/), a boutique digital agency, I worked on various innovative projects.
+
+- **App Development**: Developed multiple B2B/B2C applications such as [Ausbildung.de](https://www.ausbildung.de/) and [Meineuni.de](https://www.meineuni.de/).
+- **Cross-Functional Collaboration**: Collaborated with an international team across backend, frontend, and full-stack roles.
+- **Solution Research**: Conducted research to find solutions for new and challenging problem domains.
+
+**Technologies used:** RubyOnRails, React, Cordova, Java, Socket.io, GrapeAPI
+
+***
+
+## Backend Developer - Remote, DnD apps (Jan 2015 — Dec 2015)
+
+DnD apps, based in Rosenheim, specializes in high-quality mobile app solutions. I played a significant role in several projects, providing backend expertise.
+
+#### Key Projects
+
+- **[Starbulls Rosenheim](https://apps.apple.com/de/app/starbulls-rosenheim/id940377490)**: Developed the API for different platforms, integrated Apple Push Notification, and created a content management system.
+- **[Bw-Fahrgemeinschaft](http://bwfahrgemeinschaft.dndapps.com/)**: Ensured a secure and efficient API, implemented in-app billing for iTunes and Google Play services.
+
+**Technologies used:** RubyOnRails, Angular.js, Postgres, Rpush
