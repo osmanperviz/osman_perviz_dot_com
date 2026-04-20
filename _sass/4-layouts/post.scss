@@ -5,6 +5,22 @@
   margin: 0 auto;
   color: var(--text-color);
 
+  // Mermaid diagrams — break out of the text column, properly centered
+  .mermaid {
+    width: min(1050px, calc(100vw - 80px));
+    margin: 48px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    svg {
+      display: inline-block !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
+
   a {
     border-bottom: 3px solid var(--border-color);
     transition: $global-transition;

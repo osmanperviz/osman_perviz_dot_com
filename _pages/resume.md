@@ -1,69 +1,58 @@
 ---
 layout: page
-title: "resume"
+title: "Resume"
+seo_description: "Osman Perviz — senior product engineer in Bonn. Selected work from Studitemps, ClearRank.io, Metalsale.com, Evopark, and earlier roles."
 permalink: /resume/
-image: '/images/11.jpg'
-seo_description: "Discover the professional journey of Osman, a senior software engineer specializing in Domain-Driven Design, event-driven systems, and full-stack development. Explore his roles at Studitemps, Serohtec, Evopark, 9elements, and DnD apps."
+image: '/images/about_me.jpeg'
 ---
-## Senior Software Engineer, Studitemps GmbH, Köln (Oct 2019 — Present)
 
-[Jobvalley](https://jobvalley.com/de-de/) is Germany's premier employer platform for students, graduates, and young professionals. As a key member of the Corporate team, I lead the development of an event-driven distributed system utilizing Domain-Driven Design (DDD) principles.
+A look at what I've actually built. The [About page](/about/) is the narrative; this is the work.
 
-- **System Architecture**: Architect and maintain multiple self-contained systems to ensure scalability and robustness.
-- **Event Design**: Spearhead the design and modeling of critical events within the system.
-- **Innovation and Collaboration**: Drive future projects and innovation, collaborating with cross-functional teams.
-- **Code Quality**: Conduct thorough code peer reviews to maintain high standards.
-- **Process Improvement**: Develop and refine working processes to enhance team productivity.
-- **Mentorship and Leadership**: Mentor new employees and conduct job interviews to build a strong team.
+## Selected work
 
-**Technologies used:** Elixir, Ruby, LiveView, React, RabbitMQ, Postgres, GraphQL, AWS
+### Architectural consolidation &nbsp;·&nbsp; Studitemps
 
-***
+Leading the move from distributed microservices with event sourcing back into a modular monolith with cleaner bounded contexts. Unifying databases, phasing out the event sourcing layer, reshaping domain ownership. The system never earned the distribution cost. This is the cleanup.
 
-## Full-Stack Developer, Serohtec GmbH, Köln (Nov 2017 — Aug 2019)
+### AI in production &nbsp;·&nbsp; Studitemps
 
-At Serohtec, a dynamic startup in Cologne, I played a pivotal role in developing [Metalsale.com](https://www.metalsale.com/), a groundbreaking digital trading platform for non-ferrous metal scrap.
+Multi-step agent pipelines, retrieval-augmented context, model fine-tuning, and tool-use patterns that have to hold up under real customer load. The work is less about picking models and more about making inference predictable at scale.
 
-- **Infrastructure Development**: Engineered the entire AWS infrastructure from scratch, including CI/CD pipelines, VPN network, deployment processes, auto-scaling clusters, and monitoring tools.
-- **Event Sourcing**: Designed and modeled event-driven systems implementing Event Sourcing and CQRS architecture patterns.
-- **Real-Time Communication**: Developed real-time event-based communication systems to enhance user interaction.
+### Vendor integrations &nbsp;·&nbsp; Studitemps
 
-**Technologies used:** Node.js, React.js, Postgres, GraphQL, AWS
+Automated integrations with major vendor management platforms (Inditex, Compleet). Eliminated manual workflows that had been costing the operations team hours per transaction. Revenue impact in the multi-million-EUR range annually.
 
-***
+### Operational automation &nbsp;·&nbsp; Studitemps
 
-## Full-Stack Developer, Evopark GmbH, Köln (Jun 2016 — Oct 2017)
+Make.com and n8n workflows connecting engineering to business operations without dedicated development cycles. The HubSpot deal → order generation flow alone saves ~30 minutes per order. Real impact per hour of work is higher here than anywhere else.
 
-At [Evopark](https://www.evopark.com/en/start-en/), I contributed to simplifying parking for motorists through innovative app solutions.
+### ClearRank.io &nbsp;·&nbsp; Founder & Sole Builder
 
-- **Product Development**: Developed multiple high-profile products for clients like Porsche, Axa, and SWT.
-- **Feature Implementation**: Led the implementation of critical features, including Analytics, Payment Solutions, Localization, and custom branding.
-- **System Integration**: Integrated the app with leading garage systems like [Scheidt & Bachmann](https://www.scheidt-bachmann.de/en/) and [Skidata](https://www.skidata.com/en/).
-- **API Development**: Created REST-like APIs (Grape) and developed mobile applications to enhance user experience.
+Solo-built AI visibility platform. Tracks how ChatGPT, Perplexity, and Google's AI Overviews cite and surface brand domains. I own everything: architecture, backend, frontend, landing page, SEO, go-to-market, and content. Live at [clearrank.io](https://clearrank.io).
 
-**Technologies used:** Node.js, React.js, Postgres, GraphQL, AWS
+### Metalsale.com infrastructure from scratch &nbsp;·&nbsp; Serohtec (earlier)
 
-***
+Built the product's core AWS infrastructure end-to-end — deployment pipeline, VPN, auto-scaling, monitoring — for a real-time digital metals trading platform. Event sourcing and CQRS at the architecture layer, real-time communication for deal verification.
 
-## Full-Stack Developer, 9elements GmbH, Bochum (Feb 2016 — Jun 2016)
+## At a glance
 
-At [9elements](https://9elements.com/), a boutique digital agency, I worked on various innovative projects.
+| Role | Company | Period |
+|---|---|---|
+| Senior Product Engineer | [Studitemps / Jobvalley](https://jobvalley.com/) | Oct 2019 — Present |
+| Full Stack Engineer | [Serohtec / Metalsale.com](https://www.metalsale.com/) | Nov 2017 — Aug 2019 |
+| Full Stack Developer | [Evopark](https://www.evopark.com/) (Porsche, AXA) | Jun 2016 — Oct 2017 |
+| Full Stack Developer | [9elements](https://9elements.com/) (Ausbildung.de, Meineuni.de) | Feb 2016 — Jun 2016 |
+| Backend Developer | DnD Apps | Jan 2015 — Dec 2015 |
 
-- **App Development**: Developed multiple B2B/B2C applications such as [Ausbildung.de](https://www.ausbildung.de/) and [Meineuni.de](https://www.meineuni.de/).
-- **Cross-Functional Collaboration**: Collaborated with an international team across backend, frontend, and full-stack roles.
-- **Solution Research**: Conducted research to find solutions for new and challenging problem domains.
+## Tech I work with
 
-**Technologies used:** RubyOnRails, React, Cordova, Java, Socket.io, GrapeAPI
+**Daily:** Elixir/OTP, PostgreSQL, LiveView, RabbitMQ
+/n **Regularly:** Python, Node.js, TypeScript/React, Ruby, AWS
+**Lately:** RAG pipelines, vector databases, LLM tool use, model fine-tuning, agent patterns
 
-***
 
-## Backend Developer - Remote, DnD apps (Jan 2015 — Dec 2015)
+## Contact
 
-DnD apps, based in Rosenheim, specializes in high-quality mobile app solutions. I played a significant role in several projects, providing backend expertise.
+[LinkedIn](https://linkedin.com/in/osman-perviz) &nbsp;·&nbsp; [GitHub](https://github.com/osmanperviz) &nbsp;·&nbsp; osmanperviz@gmail.com
 
-#### Key Projects
-
-- **[Starbulls Rosenheim](https://apps.apple.com/de/app/starbulls-rosenheim/id940377490)**: Developed the API for different platforms, integrated Apple Push Notification, and created a content management system.
-- **[Bw-Fahrgemeinschaft](http://bwfahrgemeinschaft.dndapps.com/)**: Ensured a secure and efficient API, implemented in-app billing for iTunes and Google Play services.
-
-**Technologies used:** RubyOnRails, Angular.js, Postgres, Rpush
+*Open to full-time roles in product-driven engineering teams, remote or hybrid.*

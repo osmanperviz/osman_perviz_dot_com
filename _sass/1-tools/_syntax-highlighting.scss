@@ -2,11 +2,23 @@
   Syntax Highlighting
 */
 
+.highlighter-rouge {
+  color: #1e2740; // Force readable text on light code-block background
+  margin-bottom: 24px; // Breathing room after code blocks
+
+  pre, code {
+    color: #1e2740;
+  }
+}
+
 .highlight {
   background: var(--syntax-highlighting-background);
+  color: #1e2740; // Fallback text color so untinted tokens stay readable
+  margin-bottom: 24px; // Breathing room after code blocks
 
   .highlighter-rouge & {
     background: #eef;
+    margin-bottom: 0; // Avoid double margin when nested
   }
 
   .c     { color: #998; font-style: italic } // Comment

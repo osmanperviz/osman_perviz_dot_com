@@ -38,4 +38,44 @@
   {{ include_to_scssify | scssify }}
   </style>
   {% seo %}
+
+  <!-- Mermaid diagrams -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'dark',
+      themeVariables: {
+        darkMode: true,
+        fontSize: '18px',
+        primaryColor: '#1e2740',
+        primaryTextColor: '#f0f0f0',
+        lineColor: '#9a9eab',
+        actorBorder: '#533feb',
+        actorBkg: '#1e2740',
+        actorTextColor: '#f0f0f0',
+        signalColor: '#f0f0f0',
+        signalTextColor: '#f0f0f0'
+      },
+      sequence: {
+        actorFontSize: 16,
+        messageFontSize: 15,
+        noteFontSize: 14,
+        boxMargin: 20,
+        width: 180,
+        height: 55
+      }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('pre code.language-mermaid, code.language-mermaid').forEach((block, i) => {
+        const pre = block.closest('pre') || block;
+        const container = document.createElement('div');
+        container.className = 'mermaid';
+        container.id = 'mermaid-' + i;
+        container.textContent = block.textContent;
+        pre.replaceWith(container);
+      });
+      mermaid.run();
+    });
+  </script>
 </head>
