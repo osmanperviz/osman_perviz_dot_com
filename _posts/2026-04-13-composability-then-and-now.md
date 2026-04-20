@@ -6,7 +6,7 @@ description: "From YAML-driven micro frontends to AI agents generating internal 
 permalink: composability-then-and-now
 date: 2026-04-13 10:00:00 +0200
 image: "images/blog-hero.jpeg"
-tags: [architecture, micro-frontends, ai, composability, ai-agents, internal-tools, claude-code, low-code, typescript, react, workbench, platform-engineering]
+tags: [architecture, micro-frontends, ai, ai-agents, typescript, react, platform-engineering]
 ---
 
 Around 2019, we had a clear problem: domain experts and non-technical staff needed to build and adjust internal tools themselves, without waiting for developer time. We gave them a way to do it with six lines of YAML.
